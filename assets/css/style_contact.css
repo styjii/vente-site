@@ -1,0 +1,52 @@
+main > img {
+    width: 100%;
+}
+.form-control {
+    padding: 25px 4%;
+}
+.form-control h1 {
+    color: #1a1818;
+    text-align: center;
+    text-transform: uppercase;
+    padding-bottom: 10px;
+    margin: 0;
+}
+.form-control p {
+    color: #494242;
+    text-align: center;
+    padding-bottom: 20px;
+    margin: 0;
+}
+.form-control label {
+    display: block;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1rem;
+}
+.form-control textarea {
+    width: 100%;
+    height: 60px;
+    resize: none;
+    box-sizing: border-box;
+    outline: none;
+    margin-bottom: 20px;
+}
+.form-control input[type="text"],
+.form-control input[type="email"] {
+    width: 100%;
+    height: 25px;
+    border: 1px solid #947f7f;
+    box-sizing: border-box;
+    background: none;
+    outline: none;
+    margin-bottom: 20px;
+}
+.form-control input[type="submit"] {
+    display: block;
+    width: 100px;
+    height: 40px;
+    background: #2f681d;
+    color: #ebeef1;
+    border: none;
+    outline: none;
+    margin: auto;
+}

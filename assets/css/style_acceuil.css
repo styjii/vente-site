@@ -1,0 +1,307 @@
+/*----------------- head ----------------*/
+#head {
+    width: 100%;
+    height: calc(100vh - 75px);
+    position: relative;
+}
+.background img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    filter: brightness(50%) contrast(120%);
+}
+#head h2 {
+    text-align: center;
+    color: #f8f2f2;
+    font-size: 1.2em;
+    font-family: sans-serif;
+    position: absolute;
+    width: 100%;
+    top: 50px;
+    text-transform: uppercase;
+}
+.cursor {
+    background: #f8f2f2;
+    display: inline-block;
+    width: 3px;
+    margin-left: 4px;
+    animation: blink .8s infinite;
+}
+.cursor.typing {
+    animation: none;
+}
+@keyframes blink {
+    0% { background: #f8f2f2; }
+    49% { background: #150b27; }
+    50% { background: #150b27; }
+    99% { background: #f8f2f2; }
+}
+.wordType {
+    color: #8d9c08;
+}
+.form-search::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+.form-search {
+    position: absolute;
+    width: 80%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.form-search:hover #btn-search {
+    background: #1b0561;
+    box-shadow: 0 0 4px;
+}
+.form-search:hover #search {
+    box-shadow: 0 0 4px #0a44f3;
+}
+.form-search:hover #search {
+    transform: scaleY(1.05);
+}
+#search:focus {
+    box-shadow: 0 0 10px #0a44f3;
+}
+#search {
+    display: block;
+    background: #191255;
+    color: #3DC2EC;
+    float: left;
+    width: calc(100% - 50px);
+    height: 40px;
+    box-sizing: border-box;
+    border: 2px solid #4C3BCF;
+    border-right: none;
+    border-radius: 20px 0 0 20px;
+    outline: none;
+    padding: 0 10px 0 10px ;
+}
+#btn-search {
+    float: left;
+    display: block;
+    color: #d7e0d7;
+    width: 50px;
+    height: 40px;
+    box-sizing: border-box;
+    border: 2px solid #4C3BCF;
+    border-radius: 0 20px 20px 0;
+    background: #4C3BCF;
+    border-left: none;
+    cursor: pointer;
+}
+#head .btn {
+    position: absolute;
+    bottom: 25px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 450px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+}
+#head .btn button {
+    background: #3815aa;
+    color: #d7e0d7;
+    text-transform: uppercase;
+    font-family: sans-serif;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
+    width: 200px;
+    height: 40px;
+    border: none;
+    border-radius: 10px;
+    box-sizing: border-box;
+    padding: 0;
+}
+#head .btn button:hover {
+    background: #402E7A;
+    box-shadow: 0 0 40px #1b0561;
+    cursor: pointer;
+}
+#head .btn button .left-btn i:first-child,
+#head .btn button .right-btn i:last-child {
+    animation: firstmouvement 2s ease-out .1s infinite;
+}
+#head .btn button .left-btn i:nth-child(even),
+#head .btn button .right-btn i:nth-child(even) {
+    animation: lastmouvement 2s ease-out .1s infinite;
+}
+#head .btn button .left-btn i:last-child,
+#head .btn button .right-btn i:first-child {
+    animation: secondmouvement 2s ease-out .1s infinite;
+}
+#head .btn button:hover {
+    animation: rotate 2s ease .1s infinite;
+}
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+    25% {
+        transform: rotate(10deg);
+    }
+    50% {
+        transform: rotate(0deg);
+    }
+    75% {
+        transform: rotate(-10deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
+}
+@keyframes firstmouvement {
+    0% {
+        color: #b8f70a;
+    }
+    33% {
+        color: #2b6113;
+    }
+    66% {
+        color: #3012da;
+    }
+    99% {
+        color: #270236;
+    }
+    100% {
+        color: #b8f70a;
+    }
+}
+@keyframes secondmouvement {
+    0% {
+        color: #2b6113;
+    }
+    33% {
+        color: #3012da;
+    }
+    66% {
+        color: #270236;
+    }
+    99% {
+        color: #b8f70a;
+    }
+    100% {
+        color: #2b6113;
+    }
+}
+@keyframes lastmouvement {
+    0% {
+        color: #3012da;
+    }
+    33% {
+        color: #270236;
+    }
+    66% {
+        color: #b8f70a;
+    }
+    99% {
+        color: #2b6113;
+    }
+    100% {
+        color: #3012da;
+    }
+}
+/*----------------- cards ----------------*/
+#cards-section {
+    background: #101314;
+}
+.cards {
+    max-width: 1050px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    gap: 10px;
+    margin: auto;
+    padding: 20px;
+}
+.card {
+    width: 250px;
+    background: #3d0e0e;
+    border-radius: 10px;
+    box-shadow: 0 0 5px;
+}
+.context {
+    padding: 25px 0 40px 0;
+}
+.card h5{
+    color: #f8f2f2;
+    font-weight: normal;
+    font-family: sans-serif;
+    font-size: 1.5rem;
+    text-align: center;
+    margin: 0;
+}
+.card p {
+    color: #f8f2f2;
+    font-weight: normal;
+    font-family: sans-serif;
+    font-size: .9rem;
+    text-align: center;
+    margin: 0;
+    padding-bottom: 10px;
+}
+.card img {
+    display: block;
+    width: calc(100% - 40px);
+    height: 200px;
+    object-fit: contain;
+    margin: auto;
+}
+.card img:hover {
+    transform: rotate(-25deg);
+}
+.card .btn-buy {
+    font-family: Arial, Helvetica, sans-serif;
+    width: calc(100% - 100px);
+    height: 30px;
+    color: #f8f2f2;
+    background: #360e0e;
+    border: none;
+    box-shadow: inset 0 0 15px #240303;
+    margin-left: 30px;
+}
+.card .btn-buy:hover {
+    background: #530b0b;
+}
+.card .btn-star {
+    color: #240303;
+    border: none;
+    width: 30px;
+    height: 30px;
+    box-shadow: 1px 1px 10px #240303;
+    margin-left: 10px;
+}
+/*----------------- media query ----------------*/
+@media (max-width: 460px) {
+    #head .btn {
+        width: 350px;
+    }
+    #head .btn button {
+        width: 160px;
+    }
+    #head .btn button .left-btn i:nth-child(even),
+    #head .btn button .right-btn i:nth-child(even) {
+        display: none;
+    }
+}
+@media (max-width: 350px) {
+    #head .btn {
+        width: 250px;
+    }
+    #head .btn button {
+        width: 120px;
+    }
+    #head .btn button i {
+        display: none;
+    }
+}
+@media (max-width: 1100px) {
+    #cards {
+        max-width: 750px;
+    }
+}

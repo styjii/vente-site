@@ -58,6 +58,35 @@ function backgroundChange() {
 }
 setInterval(backgroundChange, 10000)
 
+// ---------------------- search ---------------------------
+const btn_search = document.getElementById("btn-search")
+const search = document.getElementById("search")
+
+function clickBtn() {
+    if (search.value == "T-shirt" || search.value == "T-Shirt" || search.value == "t-shirt" || search.value == "T-SHIRT") {
+        location.href = `${document.querySelectorAll(".navlink a")[2].href}#T-shirt`
+    }
+    else if (search.value == "Blousons" || search.value == "blousons" || search.value == "BLOUSONS") {
+        location.href = `${document.querySelectorAll(".navlink a")[2].href}#Blousons`
+    }
+    else if (search.value == "Chaussures" || search.value == "chaussures" || search.value == "CHAUSSURES") {
+        location.href = `${document.querySelectorAll(".navlink a")[2].href}#Chaussures`
+    }
+    else if (search.value == "Patalons" || search.value == "patalons" || search.value == "PATALONS") {
+        location.href = `${document.querySelectorAll(".navlink a")[2].href}#Patalons`
+    }
+    else {
+        alert("Aucun dans notre site !")
+        location.href = document.querySelector(".navlink a")
+    }
+}
+search.addEventListener("keypress", e => {
+    if (e.key === "Enter"){
+        clickBtn()
+    }
+})
+btn_search.addEventListener("click", clickBtn)
+
 // ---------------------- card ---------------------------
 const image = document.querySelectorAll('img[alt="x-card"]')
 const card = document.querySelectorAll('.card')
@@ -78,32 +107,3 @@ for (let i = 0; i < card.length; i++){
         btnStar[i].childNodes[1].classList.toggle('bi-star-fill')
     })
 }
-
-const btn_search = document.getElementById("btn-search")
-const search = document.getElementById("search")
-
-function clickBtn() {
-    if (search.value == "T-shirt" || search.value == "T-Shirt" || search.value == "t-shirt" || search.value == "T-SHIRT") {
-        location.href = `${document.querySelectorAll(".navlink a")[2].href}#T-shirt`
-    }
-    else if (search.value == "Blousons" || search.value == "blousons" || search.value == "BLOUSONS") {
-        location.href = `${document.querySelectorAll(".navlink a")[2].href}#Blouson`
-    }
-    else if (search.value == "Chaussures" || search.value == "chaussures" || search.value == "CHAUSSURES") {
-        location.href = `${document.querySelectorAll(".navlink a")[2].href}#Chaussures`
-    }
-    else if (search.value == "Patalons" || search.value == "patalons" || search.value == "PATALONS") {
-        location.href = `${document.querySelectorAll(".navlink a")[2].href}#Patalons`
-    }
-    else {
-        alert("Aucun dans notre site !")
-        location.href = document.querySelector(".navlink a")
-    }
-}
-
-search.addEventListener("keypress", e => {
-    if (e.key === "Enter"){
-        clickBtn()
-    }
-})
-btn_search.addEventListener("click", clickBtn)

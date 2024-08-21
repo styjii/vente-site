@@ -53,6 +53,7 @@ p {
 }
 .cards {
     position: relative;
+    overflow: hidden;
 }
 .box {
     width: 350px;
